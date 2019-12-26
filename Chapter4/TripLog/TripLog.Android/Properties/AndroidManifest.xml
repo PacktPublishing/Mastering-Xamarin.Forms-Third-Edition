@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.triplog">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+	<application android:label="TripLog.Android">
+		<!-- 
+            Required if targeting API 28 or higher 
+            Details: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/map/setup#specify-the-requirement-for-the-apache-http-legacy-library
+        -->
+		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR-MAPS-API-KEY-HERE" />
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+</manifest>

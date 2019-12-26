@@ -1,0 +1,21 @@
+﻿using System;
+using Foundation;
+using UIKit;
+using TripLog.iOS.Modules;
+
+namespace TripLog.iOS
+{
+    [Register("AppDelegate")]
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Auth.Presenters.XamarinIOS.AuthenticationConfiguration.Init();
+            Xamarin.FormsMaps.Init();
+            LoadApplication(new App(new TripLogPlatformModule()));
+
+            return base.FinishedLaunching(app, options);
+        }
+    }
+}
